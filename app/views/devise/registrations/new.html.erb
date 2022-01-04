@@ -1,6 +1,7 @@
 
 <script language="Javascript">
-  Stripe.setPublishableKey("Rails.application.credentials.dig(:stripe, :publishable_key)");
+  <!-- Stripe.setPublishableKey("Rails.application.credentials.dig(:stripe, :publishable_key)"); -->
+  Stripe.setPublishableKey("ENV['STRIPE_TEST_PUBLISHABLE_KEY']");
 </script>
 
 <%= bootstrap_devise_error_messages! %>
